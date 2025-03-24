@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Young Serif';
+    src: url('assets/fonts/young-serif.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit.woff2') format('woff2');
+    font-weight: 400;
+}
+
+
+:root {
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+    --brown-800:  hsl(14, 45%, 36%);
+
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --font-size-body: 16px;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-family-title: 'Young Serif';
+    --font-family-body: 'Outfit';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: var(--font-family-title);
+    font-size: 38px;
+    padding: 25px 0 20px;
+    color: var(--stone-900);
+    font-weight: 400;
+}
+
+main {
+    height: auto;
+    display: grid;
+    place-items: center;
+    background-color: var(--stone-100);
+}
+
+article {
+    padding: 35px;
+    background-color: var(--white);
+    border-radius: 20px;
+    max-width: 730px;
+    margin: 100px 0;
+    font-family: var(--font-family-body);
+}
+
+article img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.preparation {
+    padding: 20px;
+    margin-top: 25px;
+    background-color: var(--rose-50);
+    color: var(--rose-800);
+    border-radius: 10px;
+}
+
+.preparation > h2 {
+    font-size: 18px;
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-600);
+}
+
+.preparation span {
+    font-weight: var(--font-weight-600);
+    color: var(--stone-900);
+}
+
+.preparation ul {
+    color: var(--rose-800);
+}
+
+.preparation li {
+    text-indent: 15px;
+    margin-left: 25px;
+}
+
+.preparation li > .time {
+    color: var(--stone-900);
+    font-weight: 400;
+}
+
+h2 {
+    font-family: var(--font-family-title);
+    font-weight: 400;
+    color: var(--brown-800);
+    font-size: 22px;
+    text-indent: 0;
+}
+
+section {
+    text-indent: 15px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.ingredients ul, .instructions ol {
+    padding-left: 20px;
+}
+
+.ingredients li {
+    color: var(--brown-800);
+}
+
+.ingredients li > span {
+    color: var(--stone-900);
+}
+
+.instructions ol li {
+    color: var(--brown-800);
+    font-weight: var(--font-weight-700);
+    text-indent: 0;
+}
+
+.instructions li > span {
+    color: var(--stone-900);
+}
+
+.instructions .list-instructions {
+    font-weight: 400;
+}
+
+li, p {
+    font-family: var(--font-family);
+}
+
+p {
+    font-size: 16px;
+}
+
+h2, li {
+    padding-bottom: 15px;
+}
+
+section {
+    padding-bottom: 20px;
+}
