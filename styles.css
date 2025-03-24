@@ -125,14 +125,35 @@ section {
     color: var(--stone-900);
 }
 
-.instructions ol li {
-    color: var(--brown-800);
-    font-weight: var(--font-weight-700);
+.instructions ol {
+    list-style: none;
+    counter-reset: list-counter;
+    padding-left: 0;
     text-indent: 0;
 }
 
-.instructions li > span {
+.instructions ol li {
+    counter-increment: list-counter;
+    display: flex;
+    align-items: flex-start;
+    color: var(--brown-800);
+    font-weight: var(--font-weight-700);
+}
+
+.instructions li::before {
+    content: counter(list-counter) ".";
+    width: 2.1em;
+    text-align: right;
+    margin: 1em;
+    flex-shrink: 0;
+}
+
+.instructions li .bold {
     color: var(--stone-900);
+    white-space: nowrap;
+    display: inline-block;
+    min-width: 80px;
+    flex-shrink: 0;
 }
 
 .instructions .list-instructions {
