@@ -45,6 +45,21 @@ h1 {
     font-weight: 400;
 }
 
+li, p {
+    font-family: var(--font-family);
+    color: var(--stone-900);
+    font-size: 16px;
+}
+
+h2, li {
+    padding-bottom: 15px;
+}
+
+section {
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
 main {
     height: auto;
     display: grid;
@@ -72,10 +87,11 @@ article img {
     background-color: var(--rose-50);
     color: var(--rose-800);
     border-radius: 10px;
+    border: none;
 }
 
 .preparation > h2 {
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--font-family-body);
     font-weight: var(--font-weight-600);
 }
@@ -103,7 +119,7 @@ h2 {
     font-family: var(--font-family-title);
     font-weight: 400;
     color: var(--brown-800);
-    font-size: 22px;
+    font-size: 27px;
     text-indent: 0;
 }
 
@@ -125,53 +141,42 @@ section {
     color: var(--stone-900);
 }
 
-.instructions ol {
-    list-style: none;
-    counter-reset: list-counter;
-    padding-left: 0;
-    text-indent: 0;
-}
-
 .instructions ol li {
-    counter-increment: list-counter;
-    display: flex;
-    align-items: flex-start;
+    text-indent: 0;
+    padding-left: 10px;
+}
+
+.instructions ol li::marker {
     color: var(--brown-800);
-    font-weight: var(--font-weight-700);
+    font-weight: var(--font-weight-600);
 }
 
-.instructions li::before {
-    content: counter(list-counter) ".";
-    width: 2.1em;
-    text-align: right;
-    margin: 1em;
-    flex-shrink: 0;
+.instructions ol li .bold {
+    font-weight: var(--font-weight-600);
 }
 
-.instructions li .bold {
-    color: var(--stone-900);
-    white-space: nowrap;
-    display: inline-block;
-    min-width: 80px;
-    flex-shrink: 0;
+.nutrition {
+    border: none;
 }
 
-.instructions .list-instructions {
+.nutrition table {
+    width: 100%;
+    margin-top: 10px;
+    table-layout: fixed;
+}
+
+.nutrition th, td {
+    border-bottom: 1px solid lightgray;
+}
+
+.nutrition th {
+    padding: 15px;
+    text-align: left;
     font-weight: 400;
+    color: var(--stone-900);
 }
 
-li, p {
-    font-family: var(--font-family);
-}
-
-p {
-    font-size: 16px;
-}
-
-h2, li {
-    padding-bottom: 15px;
-}
-
-section {
-    padding-bottom: 20px;
+.nutrition td {
+    font-weight: var(--font-weight-700);
+    color: var(--brown-800);
 }
