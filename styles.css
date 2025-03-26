@@ -10,7 +10,6 @@
     font-weight: 400;
 }
 
-
 :root {
     --white: hsl(0, 0%, 100%);
 
@@ -46,7 +45,7 @@ h1 {
 }
 
 li, p {
-    font-family: var(--font-family);
+    font-family: var(--font-family-body);
     color: var(--stone-900);
     font-size: 16px;
 }
@@ -58,6 +57,8 @@ h2, li {
 section {
     padding-bottom: 20px;
     border-bottom: 1px solid lightgray;
+    text-indent: 15px;
+    margin-top: 20px;
 }
 
 main {
@@ -68,7 +69,7 @@ main {
 }
 
 article {
-    padding: 35px;
+    padding: 40px;
     background-color: var(--white);
     border-radius: 20px;
     max-width: 730px;
@@ -94,6 +95,7 @@ article img {
     font-size: 20px;
     font-family: var(--font-family-body);
     font-weight: var(--font-weight-600);
+    color: var(--rose-800);
 }
 
 .preparation span {
@@ -103,11 +105,12 @@ article img {
 
 .preparation ul {
     color: var(--rose-800);
+    padding-left: 25px;
 }
 
 .preparation li {
-    text-indent: 15px;
-    margin-left: 25px;
+    padding-left: 10px;
+    color: var(--brown-800);
 }
 
 .preparation li > .time {
@@ -121,12 +124,6 @@ h2 {
     color: var(--brown-800);
     font-size: 27px;
     text-indent: 0;
-}
-
-section {
-    text-indent: 15px;
-    margin-top: 20px;
-    margin-left: 25px;
 }
 
 .ingredients ul, .instructions ol {
@@ -159,6 +156,10 @@ section {
     border: none;
 }
 
+.nutrition p {
+    text-indent: 0;
+}
+
 .nutrition table {
     width: 100%;
     margin-top: 10px;
@@ -170,7 +171,7 @@ section {
 }
 
 .nutrition th {
-    padding: 15px;
+    padding: 15px 25px;
     text-align: left;
     font-weight: 400;
     color: var(--stone-900);
@@ -180,3 +181,4 @@ section {
     font-weight: var(--font-weight-700);
     color: var(--brown-800);
 }
+
